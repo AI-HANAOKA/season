@@ -1,0 +1,996 @@
+body {
+    height: 100vh;
+    widows: 100vw;
+    font-family: "Sawarabi Mincho";
+}
+
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #917886; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    color: #fff;
+    font-size: 25px;
+    margin : 0 20px;
+}
+
+header a {
+    color: #fff;
+    font-size: 25px;
+    margin : 0 20px;
+    text-decoration: none;
+    transition: all .7s ease;
+}
+
+header a:active {
+    color: #88cb7f;
+}
+
+
+
+
+
+
+.visual {
+    height: 500px;
+    width: 100%;
+    /* 後で消せ */  
+    background-image: linear-gradient( 45deg , #fff ,#ffb1d4 , #fff , #ffeab0 , #fff , #fdd2ba , #fff , #bbd0ff , #fff);
+    /* はみ出した要素の表示方法指定　hidden はみ出し切り捨て　スクロールもでない     */
+    overflow: hidden;
+    border-bottom: 50px solid #917886;
+}
+
+.title {
+    height: 100%;
+    width: 100%;
+    overflow   : hidden;
+    position: relative;
+}
+
+.title-rigth {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.title-rigth h1 {
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 0 0 8px red;
+    padding: 5px;
+    margin: 10px;
+    position: absolute;
+}
+
+.title-left h2 {
+    font-size: 25px;    
+    color: #fff;
+    text-shadow: 0 0 8px red;
+    padding: 5px;
+    margin: 10px 0 0 10px;
+    white-space: pre-wrap;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+/* セレクション */
+.selection , .selection-summer , .selection-autumn , .selection-winter {
+    width: 100%;
+    height: 600px;
+    overflow   : hidden;
+}
+
+
+
+
+
+
+/* タイトル */
+#scroll-text-sp , #scroll-text-win , #scroll-text-au , #scroll-text-sm , #contact , .footer-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#scroll-text-sp h2 , #scroll-text-win h2 , #scroll-text-au h2 , #scroll-text-sm h2 , #contact h2 , .footer-text h3{
+    width: 100%;
+    text-align: center;
+    font-size: 65px;
+    border-bottom: 5px double #917886;
+    padding: 10px;
+    margin-top: 50px;
+    color: #e95295;
+}
+
+.footer-text h3 {
+    font-size: 37px;
+    color: #fff0f0;
+    padding: 5px 0;
+    text-shadow: 0 0 5px #ff0000;
+    white-space: pre-wrap;
+}
+
+#scroll-text-sp p , #scroll-text-sm p , #scroll-text-au p , #scroll-text-win p ,#contact p , .footer-text p {
+    font-size: 17px;
+    margin: 10px;
+    color: #e95295;
+}
+
+.selection-summer > #scroll-text-sm > h2 ,  .selection-summer > #scroll-text-sm > p {
+    color: #f8b500;
+}
+
+.selection-autumn > #scroll-text-au > h2 ,  .selection-autumn > #scroll-text-au > p {
+    color: #ea5506;
+}
+
+.selection-winter > #scroll-text-win > h2 ,  .selection-winter > #scroll-text-win > p {
+    color: #3e62ad;
+}
+
+#contact h2 , #contact p {
+    color: #3acf60;
+}
+
+.footer-text p {
+    color: #fda1a1;
+}
+
+
+
+/* 季節選択 */
+.season-select {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: 50px 0; */
+}
+
+.season-select a {
+    text-decoration: none;
+    font-size: 40px;
+    color: #fff;
+}
+
+#sp {
+    /* background-color:#f8b500; */
+    padding: 50px;
+    border-radius: 150px;
+    background-image: radial-gradient(circle, #e95295 20% , #fff 75% 100%);
+    transition: all .5s ease-out;
+}
+
+#sp:active {
+    color: #e95295;
+    background-image: radial-gradient(circle, #fff, #fff);
+    text-shadow: 0 0 10px #e95295;
+}
+
+#sm {
+    /* background-color:#f8b500; */
+    padding: 50px;
+    border-radius: 150px;
+    background-image: radial-gradient(circle, #f8b500 20% , #fff 75% 100%);
+    transition: all .5s ease-out;
+}
+
+#sm:active {
+    color: #f8b500;
+    background-image: radial-gradient(circle, #fff, #fff);
+    text-shadow: 0 0 10px #ffea00;
+}
+
+
+#au {
+    padding: 50px;
+    border-radius: 150px;
+    background-image: radial-gradient(circle, #ea5506 20%, #fff 75% 100%);
+    transition: all .5s ease-out;
+}
+
+#au:active {
+    color: #ea5506;
+    background-image: radial-gradient(circle, #fff, #fff);
+    text-shadow: 0 0 10px #f6ad49;
+}
+
+#win {
+    padding: 50px;
+    border-radius: 150px;
+    background-image: radial-gradient(circle, #3e62ad 20%, #fff 75% 100%);
+    transition: all .5s ease-out;  
+}
+
+#win:active {
+    color: #3e62ad;
+    background-image: radial-gradient(circle, #fff, #fff);
+    text-shadow: 0 0 10px #84a2d4;
+}
+
+.top-back {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30%;
+}
+
+.top-back a {
+    text-decoration: none;
+    color: #3acf60;
+    font-size: 35px;
+}
+
+#bc {
+    padding: 30px 50px 20px;
+    transition: all .5s ease .3s ;
+}
+
+#bc:active {
+    color: #fff;
+    text-shadow: 0 0 10px #3acf60;
+    border-bottom: 2px solid #3acf60;
+}
+
+#con {
+    padding: 30px 50px 20px;
+    transition: all .5s ease .3s ;
+}
+
+#con:active {
+    color: #fff;
+    text-shadow: 0 0 10px #3acf60;
+    border-bottom: 2px solid #3acf60;
+}
+
+
+
+/* 春　タイトル */
+.season-spring , .season-summer , .season-autumn , .season-winter {
+    width: 100%;
+    height: 130px;
+    overflow   : hidden;
+    margin-top: 20px;
+}
+
+.season-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6bfbc;
+    padding: 5px;
+    border-radius: 50px;
+    border-top: 8px double #917886;
+    border-bottom: 8px solid #917886;
+}
+
+.season-summer > .season-title {
+    background-color: #f6ebbc;
+}
+
+.season-autumn > .season-title {
+    background-color: #f6ccbc;
+}
+
+.season-winter > .season-title {
+    background-color: #bcc7f6;
+}
+
+
+.season-title-left , .season-title-rigth {
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    color: #fff;
+}
+
+.big {
+    font-size: 70px;
+}
+
+.season-title-left p {
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.season-title-rigth p {
+    animation: r2 1s linear infinite;
+}
+ 
+@keyframes r2 {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }   
+}
+
+/* 春文字 */
+.season-title-center a {
+    color: #e95295;
+    font-size: 70px;
+    text-shadow: 0 5px 1px #fff;
+    margin: 0 50px;
+    text-decoration: none;
+}
+
+.season-summer > .season-title > .season-title-center a {
+    color: #f8b500;
+
+}
+
+.season-autumn > .season-title > .season-title-center a {
+    color: #ea5506;
+}
+
+.season-winter > .season-title > .season-title-center a {
+    color: #3e62ad;
+}
+
+
+
+
+/* 春の入り */
+.spring-Introduction , .summer-Introduction, .autumn-Introduction , .winter-Introduction{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    /* 相対配置 */
+    position: relative;
+}
+
+.grd {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient( rgba(255, 0, 0, 0) 70%, rgba(255, 255, 255, 0.788) 80% );
+    border-bottom: 20px solid #917886;
+    padding: 10px 0;
+}
+
+.spring-Introduction p , .summer-Introduction p, .autumn-Introduction p , .winter-Introduction p {
+    color:  #e95295;
+    text-shadow: 0 0 5px #fff;
+    font-size: 21px;
+    width: 100%;
+    height: 200px;
+    padding: 10px 20px;
+    margin: 10px 0px 30px;
+    /* 背景色を半透明　文字色を不透明 */
+    /* 線が無くても角を丸めた背景色にできる */
+    border-radius: 10px;
+    /* 絶対位置 */
+    position: absolute;
+    white-space: pre-wrap;
+}
+
+.summer-Introduction p {
+    background-color: rgba(230, 187, 47, 0.664);
+}
+
+.autumn-Introduction p {
+    background-color: rgba(230, 99, 47, 0.664);
+}
+
+.winter-Introduction p {
+    background-color: rgba(82, 97, 235, 0.664);
+}
+
+.spring-Introduction p span , .summer-Introduction p span , .autumn-Introduction p span , .winter-Introduction p span {
+    color: #e95295;
+    font-weight: bold;
+    font-size: 25px;
+    text-shadow: 0 0 6px#fff;
+    padding-top: 30px;
+}
+
+
+
+.spring-Introduction img , .summer-Introduction img , .autumn-Introduction img , .winter-Introduction img {
+    height: 100%;
+    width: 100%;
+    /* 画像反転 */
+    /* transform: scale(-1 , 1); */
+    background-repeat: no-repeat;
+    /* イメージにグレイスケール */
+    /* 画像を中央でトリミング表示 */
+    object-fit: cover;
+}
+
+
+.spring-Introduction , .summer-Introduction , .autumn-Introduction , .winter-Introduction {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    /* 相対配置 */
+    position: relative;
+}
+
+
+
+
+
+/* ロケーション */
+    /* 芝桜  rigth text*/
+.location1 , .location3 ,  .location6 , .location8 , .location10 , .location12 , .location14{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* 相対配置 */
+    position: relative;
+    overflow   : hidden;
+    border-bottom: 20px solid #917886;
+}
+
+.location1 p , .location2 p , .location3 p , .location4 p , .location5 p , .location6 p , .location7 p , .location8 p , .location9 p , .location10 p , .location11 p , .location12 p , .location13 p , .location14 p {
+    color: #fff;
+    font-size: 20px;
+    margin: 10px 10px;
+    padding: 0 30px;
+    /* 背景色を半透明　文字色を不透明 */
+    background-color: rgba(219, 79, 165, 0.664);
+    /* 線が無くても角を丸めた背景色にできる */
+    border-radius: 10px;
+    /* 絶対位置 */
+    position: absolute;
+    white-space: pre-wrap;
+}
+
+.location5 p , .location6 p , .location7 p {
+    background-color:  rgba(230, 187, 47, 0.664);
+}
+
+.location8 p , .location9 p , .location10 p {
+    background-color:  rgba(230, 99, 47, 0.664);
+}
+
+.location11 p, .location12 p , .location13 p , .location14 p {
+    background-color: rgba(82, 97, 235, 0.664);
+}
+
+.location1 span , .location2 span , .location3 span , .location4 span , .location5 span , .location6 span , .location7 span , .location8 span , .location9 span , .location10 span , .location11 span , .location12 span , .location13 span , .location14 span{
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 0 0 6px#fff;
+    padding-top: 30px;
+}
+
+.location1 > .bgi-gray , .location2 > .bgi-gray , .location3 > .bgi-gray , .location4 > .bgi-gray , .location5 > .bgi-gray , .location6 > .bgi-gray , .location7 > .bgi-gray , .location8 > .bgi-gray , .location9 > .bgi-gray , .location10 > .bgi-gray , .location11 > .bgi-gray , .location12 > .bgi-gray , .location13 > .bgi-gray , .location14 > .bgi-gray{
+    height: 100%;
+    width: 100%;
+    background-size:  1950px;
+    object-fit: cover;
+
+    /* 画像反転 */
+    /* transform: scale(-1 , 1); */
+    background-repeat: no-repeat;
+    /* イメージにグレイスケール */
+    -webkit-filter: grayscale(100%);
+    transition-duration: 0.5s;
+}
+
+.location1 > .bgi-gray:hover , .location2 > .bgi-gray:hover , .location3 > .bgi-gray:hover , .location4 > .bgi-gray:hover , .location5 > .bgi-gray:hover , .location6 > .bgi-gray:hover , .location7 > .bgi-gray:hover , .location8 > .bgi-gray:hover , .location9 > .bgi-gray:hover , .location10 > .bgi-gray:hover , .location11 > .bgi-gray:hover , .location12 > .bgi-gray:hover , .location13 > .bgi-gray:hover , .location14 > .bgi-gray:hover{
+    filter: grayscale(0);
+    transition-duration: 0.5s;    
+}
+
+    /* 菜の花 left text*/
+.location2 , .location4  , .location5 , .location7 , .location9 , .location11 , .location13{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    /* 相対配置 */
+    position: relative;
+    overflow   : hidden;
+    border-bottom: 20px solid #917886;
+
+}
+
+.location13 img {
+    transform: scale(-1, 1);
+}
+
+
+.select-jump {
+    text-decoration: none;
+    text-align: end;
+    color: #fff;
+    transition: all 1s;
+}
+
+.select-jump:hover {
+    border-bottom: 1px solid #fff;
+}
+
+
+
+
+/* 春　アクセス　タイトル */
+.spring-access {
+    width: 100%;
+    overflow   : hidden;
+    margin: 30px 0 20px;
+}
+
+
+
+
+
+    /* 芝桜　アクセス */
+.access1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #e95295;
+    background-image: linear-gradient(#fff 20%, #f393be);
+} 
+
+.access-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.access-left img {
+    height: 470px;
+    margin: 0 10px 10px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.access-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.access-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.access-rigth h3 {
+    color: #e95295;
+    font-size: 40px;
+    margin: 10px;
+    text-align: center;
+}
+
+.access-title li , .access-details li{
+    font-size: 30px;
+    padding: 10px;
+}
+
+.access-title li {
+    color: #e95295;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    border-radius: 50px;
+    width: 90%;
+    object-fit: cover;
+
+}
+
+
+
+
+
+
+/* 夏　アクセス */
+.access-summer {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    border-bottom: 1px solid #f8b500;
+    background-image: linear-gradient(#fff 20%, #f3e593);
+} 
+
+.access-summer h3 {
+    color: #f8b500;
+    font-size: 40px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.access-summer-text {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.access-summer-title li , .access-details li{
+    font-size: 23px;
+    padding: 10px;
+}
+
+.access-summer-title {
+    color: #f8b500;
+}
+
+
+
+
+
+/* 秋 */
+.access-autumn {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    border-bottom: 1px solid #ea5506;
+    background-image: linear-gradient(#fff 20%, #f3a193);
+} 
+
+.access-autumn h3 {
+    color: #ea5506;
+    font-size: 40px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.access-autumn-text {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.access-autumn-title li , .access-details li{
+    font-size: 23px;
+    padding: 10px;
+}
+
+.access-autumn-title {
+    color: #ea5506;
+}
+
+
+
+
+/* 冬 */
+.access-winter {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    border-bottom: 1px solid #3e62ad;
+    background-image: linear-gradient(#fff 20%, #9399f3);
+} 
+
+.access-winter h3 {
+    color: #3e62ad;
+    font-size: 40px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.access-winter-text {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.access-winter-title li , .access-details li{
+    font-size: 23px;
+    padding: 10px;
+}
+
+.access-winter-title {
+    color: #3e62ad;
+}
+
+
+
+
+
+
+
+/* コンタクト */
+form {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #648625;
+    background-image: linear-gradient(#fff 60%, #f0ffb9);
+
+}
+
+.text-box {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 30%;
+    height: 30px;
+    background-color: #cee0c4;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 35px;
+}
+
+textarea {
+    width: 50%;
+    height: 200px;
+    background-color: #cee0c4;
+    border: none;
+    border-radius: 20px;
+}
+
+
+    /* placeholderの文字位置や、その他もろもろの変更 */
+input::placeholder , textarea::placeholder {
+    font-family: "Sawarabi Mincho";
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+    font-size: 20px;
+}
+
+textarea::placeholder {
+    font-size: 30px;
+}
+
+
+/* ボタンタイトル */
+.button-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-title .border {
+    width: 65%;
+    border-bottom: 1.5px dashed #3acf60;
+    border-radius: 5px;
+    color: #3acf60;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.border h3 {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.border-bottom {
+    display: flex;
+}
+
+.border-bottom p {
+    color: red;
+    margin-top: 5px;
+}
+
+
+
+/* チェックボックス */
+.checkbox {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    /* チェックボックスカスタマイズ↓ */
+.checkbox input {
+    margin: 0;
+    padding: 10px;   
+}
+
+.checkbox span {
+    color: #fff;
+    font-size: 40px;
+    padding: 20px;
+    border-radius: 50pc;
+    margin-left: 30px;
+    margin-right: 80px;
+}
+
+.checkbox .checkbox-parts1 {
+    background-image: radial-gradient(circle, #e95295 20% , #fff 75% 100%);
+}
+
+
+.checkbox .checkbox-parts2 {
+    background-image: radial-gradient(circle, #f8b500 20% , #fff 75% 100%);
+}
+
+.checkbox .checkbox-parts3 {
+    background-image: radial-gradient(circle, #ea5506 20%, #fff 75% 100%);
+}
+
+.checkbox .checkbox-parts4 {
+    background-image: radial-gradient(circle, #3e62ad 20%, #fff 75% 100%);
+}
+
+    /* チェックボックスのサイズ変更 */
+.checkbox input[type=checkbox] {
+	width:			15px;
+    height:			15px;
+    margin-left: 30px;
+	-moz-transform:		scale(1.4);
+	-webkit-transform:	scale(1.4);
+    transform:		scale(1.4);
+}
+
+
+
+
+
+
+/* 送信 */
+.submit {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit input {
+    border-radius: 0px;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    color: #3acf60;
+    text-shadow: 0 0 5px;
+    background-color: rgba(255, 255, 255, 0);
+    height: 50px;
+    font-size: 35px;
+    font-family: "Sawarabi Mincho";
+    transition: all .5s ease .3s ;
+}
+
+.submit input:hover {
+    color: #fff;
+    text-shadow: 0 0 7px #3acf60;
+    border-bottom: 7px double #3acf60;
+    background-image: linear-gradient(rgba(238, 255, 198, 0) , #a9e9b9 );
+}
+
+
+
+
+
+/* フッターテキスト */
+.footer-link {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-link a {
+    font-size: 80px;
+    text-decoration: none;
+    padding: 10px;
+    /* 透明色 */
+    color: #fff;
+    text-shadow: 0 0 15px #3acf60;
+    transition: all 1s ease;
+}
+
+
+.footer-link a:hover {
+    width: 30%;
+    text-align: center;
+    color: #3acf60;
+    padding-bottom: 15px;
+    border-bottom: 7px double #3acf60;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+/* フッターテキスト */
+.footer-text {
+    width: 100%;
+    height: 200px;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #917886; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-title {
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-title-left , .footer-title-rigth {
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-big {
+    font-size: 60px;
+}
+
+.footer-small {
+    font-size: 25px;
+}
+
+.footer-title-center {
+    font-size: 45px;
+    margin: 0 20px;
+}
+
+.footer-title-left p {
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.footer-title-rigth p {
+    animation: r2 1s linear infinite;
+}
+ 
+@keyframes r2 {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }   
+}
