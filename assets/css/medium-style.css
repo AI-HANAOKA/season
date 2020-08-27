@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    widows: 100vw;
+    width: 100vw;
     font-family: "Sawarabi Mincho";
 }
 
@@ -50,7 +50,6 @@ header a:active {
 .title {
     height: 100%;
     width: 100%;
-    overflow   : hidden;
     position: relative;
 }
 
@@ -92,7 +91,6 @@ header a:active {
 .selection , .selection-summer , .selection-autumn , .selection-winter {
     width: 100%;
     height: 600px;
-    overflow   : hidden;
 }
 
 
@@ -266,7 +264,6 @@ header a:active {
 .season-spring , .season-summer , .season-autumn , .season-winter {
     width: 100%;
     height: 130px;
-    overflow   : hidden;
     margin-top: 20px;
 }
 
@@ -388,15 +385,15 @@ header a:active {
 }
 
 .summer-Introduction p {
-    background-color: rgba(230, 187, 47, 0.664);
+    color: #f8b500;
 }
 
 .autumn-Introduction p {
-    background-color: rgba(230, 99, 47, 0.664);
+    color: #ea5506;
 }
 
 .winter-Introduction p {
-    background-color: rgba(82, 97, 235, 0.664);
+    color: #3e62ad;
 }
 
 .spring-Introduction p span , .summer-Introduction p span , .autumn-Introduction p span , .winter-Introduction p span {
@@ -407,7 +404,17 @@ header a:active {
     padding-top: 30px;
 }
 
+.summer-Introduction p span {
+    color: #f8b500;
+}
 
+.autumn-Introduction p span {
+    color: #ea5506;
+}
+
+.winter-Introduction p span {
+    color: #3e62ad;    
+}
 
 .spring-Introduction img , .summer-Introduction img , .autumn-Introduction img , .winter-Introduction img {
     height: 100%;
@@ -440,38 +447,34 @@ header a:active {
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: flex-end;
     /* 相対配置 */
     position: relative;
-    overflow   : hidden;
     border-bottom: 20px solid #917886;
 }
 
 .location1 p , .location2 p , .location3 p , .location4 p , .location5 p , .location6 p , .location7 p , .location8 p , .location9 p , .location10 p , .location11 p , .location12 p , .location13 p , .location14 p {
     color: #fff;
     font-size: 20px;
-    margin: 10px 10px;
+    width: cover;
     padding: 0 30px;
     /* 背景色を半透明　文字色を不透明 */
-    background-color: rgba(219, 79, 165, 0.664);
-    /* 線が無くても角を丸めた背景色にできる */
-    border-radius: 10px;
+    background-image: linear-gradient( rgba(255, 255, 255, 0) , rgba(219, 79, 165, 0.664) 90%);
     /* 絶対位置 */
     position: absolute;
     white-space: pre-wrap;
 }
 
 .location5 p , .location6 p , .location7 p {
-    background-color:  rgba(230, 187, 47, 0.664);
+    background-image: linear-gradient( rgba(255, 255, 255, 0) , rgba(230, 187, 47, 0.664) 90%);
 }
 
 .location8 p , .location9 p , .location10 p {
-    background-color:  rgba(230, 99, 47, 0.664);
+    background-image: linear-gradient( rgba(255, 255, 255, 0) , rgba(230, 99, 47, 0.664) 90%);
 }
 
 .location11 p, .location12 p , .location13 p , .location14 p {
-    background-color: rgba(82, 97, 235, 0.664);
+    background-image: linear-gradient( rgba(255, 255, 255, 0) , rgba(82, 97, 235, 0.664) 90%);
 }
 
 .location1 span , .location2 span , .location3 span , .location4 span , .location5 span , .location6 span , .location7 span , .location8 span , .location9 span , .location10 span , .location11 span , .location12 span , .location13 span , .location14 span{
@@ -484,15 +487,34 @@ header a:active {
 .location1 > .bgi-gray , .location2 > .bgi-gray , .location3 > .bgi-gray , .location4 > .bgi-gray , .location5 > .bgi-gray , .location6 > .bgi-gray , .location7 > .bgi-gray , .location8 > .bgi-gray , .location9 > .bgi-gray , .location10 > .bgi-gray , .location11 > .bgi-gray , .location12 > .bgi-gray , .location13 > .bgi-gray , .location14 > .bgi-gray{
     height: 100%;
     width: 100%;
-    background-size:  1950px;
+    background-size:  100%;
     object-fit: cover;
 
     /* 画像反転 */
     /* transform: scale(-1 , 1); */
-    background-repeat: no-repeat;
     /* イメージにグレイスケール */
     -webkit-filter: grayscale(100%);
     transition-duration: 0.5s;
+}
+
+.location6 > .bgi-gray {
+    object-position: 20% 100%;
+}
+
+.location14 > .bgi-gray {
+    object-position: 35% 100% ;
+}
+
+.location13 > .bgi-gray {
+    object-position: 50% 100%;
+}
+
+.location12 > .bgi-gray {
+    object-position: 10% 100%;
+}
+
+.location9 > .bgi-gray {
+    object-position: 50% 100%;
 }
 
 .location1 > .bgi-gray:hover , .location2 > .bgi-gray:hover , .location3 > .bgi-gray:hover , .location4 > .bgi-gray:hover , .location5 > .bgi-gray:hover , .location6 > .bgi-gray:hover , .location7 > .bgi-gray:hover , .location8 > .bgi-gray:hover , .location9 > .bgi-gray:hover , .location10 > .bgi-gray:hover , .location11 > .bgi-gray:hover , .location12 > .bgi-gray:hover , .location13 > .bgi-gray:hover , .location14 > .bgi-gray:hover{
@@ -504,11 +526,10 @@ header a:active {
 .location2 , .location4  , .location5 , .location7 , .location9 , .location11 , .location13{
     height: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-end;
     /* 相対配置 */
     position: relative;
-    overflow   : hidden;
     border-bottom: 20px solid #917886;
 
 }
@@ -535,7 +556,6 @@ header a:active {
 /* 春　アクセス　タイトル */
 .spring-access {
     width: 100%;
-    overflow   : hidden;
     margin: 30px 0 20px;
 }
 
@@ -548,6 +568,8 @@ header a:active {
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     border-bottom: 1px solid #e95295;
     background-image: linear-gradient(#fff 20%, #f393be);
@@ -560,10 +582,11 @@ header a:active {
 }
 
 .access-left img {
-    height: 470px;
+    height: 350px;
     margin: 0 10px 10px;
     border-radius: 50px;
     object-fit: cover;
+    width: cover;
 }
 
 .access-text {
@@ -615,8 +638,11 @@ iframe {
 /* 夏　アクセス */
 .access-summer {
     width: 100%;
-    height: 65%;
+    height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-bottom: 1px solid #f8b500;
     background-image: linear-gradient(#fff 20%, #f3e593);
 } 
@@ -635,7 +661,7 @@ iframe {
 }
 
 .access-summer-title li , .access-details li{
-    font-size: 23px;
+    font-size: 30px;
     padding: 10px;
 }
 
@@ -650,8 +676,11 @@ iframe {
 /* 秋 */
 .access-autumn {
     width: 100%;
-    height: 65%;
+    height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-bottom: 1px solid #ea5506;
     background-image: linear-gradient(#fff 20%, #f3a193);
 } 
@@ -670,7 +699,7 @@ iframe {
 }
 
 .access-autumn-title li , .access-details li{
-    font-size: 23px;
+    font-size: 30px;
     padding: 10px;
 }
 
@@ -684,8 +713,11 @@ iframe {
 /* 冬 */
 .access-winter {
     width: 100%;
-    height: 65%;
+    height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-bottom: 1px solid #3e62ad;
     background-image: linear-gradient(#fff 20%, #9399f3);
 } 
@@ -704,7 +736,7 @@ iframe {
 }
 
 .access-winter-title li , .access-details li{
-    font-size: 23px;
+    font-size: 30px;
     padding: 10px;
 }
 
@@ -724,12 +756,11 @@ form {
     height: 100%;
     border-bottom: 1px solid #648625;
     background-image: linear-gradient(#fff 60%, #f0ffb9);
-
 }
 
 .text-box {
     width: 100%;
-    height: 40%;
+    height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -737,7 +768,7 @@ form {
 }
 
 input {
-    width: 30%;
+    width: 50%;
     height: 30px;
     background-color: #cee0c4;
     border: none;
@@ -746,8 +777,8 @@ input {
 }
 
 textarea {
-    width: 50%;
-    height: 200px;
+    width: 80%;
+    height: 250px;
     background-color: #cee0c4;
     border: none;
     border-radius: 20px;
@@ -771,6 +802,8 @@ textarea::placeholder {
 
 /* ボタンタイトル */
 .button-title {
+    height: 100px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -778,7 +811,7 @@ textarea::placeholder {
 }
 
 .button-title .border {
-    width: 65%;
+    width: 800%;
     border-bottom: 1.5px dashed #3acf60;
     border-radius: 5px;
     color: #3acf60;
@@ -789,7 +822,7 @@ textarea::placeholder {
 }
 
 .border h3 {
-    font-size: 20px;
+    font-size: 25px;
     padding-bottom: 10px;
 }
 
@@ -798,6 +831,7 @@ textarea::placeholder {
 }
 
 .border-bottom p {
+    font-size: 20px;
     color: red;
     margin-top: 5px;
 }
@@ -806,11 +840,9 @@ textarea::placeholder {
 
 /* チェックボックス */
 .checkbox {
-    margin-top: 30px;
+    margin-top: 0px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
+flex-direction: column;}
 
 
     /* チェックボックスカスタマイズ↓ */
@@ -819,13 +851,32 @@ textarea::placeholder {
     padding: 10px;   
 }
 
+.checkbox-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.checkbox-right {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.checkbox input {
+    margin: 20px 15px 20px 20px;
+    padding: 10px;   
+}
+
 .checkbox span {
     color: #fff;
     font-size: 40px;
-    padding: 20px;
+    padding: 30px;
     border-radius: 50pc;
-    margin-left: 30px;
-    margin-right: 80px;
+    margin: 0 10px 10px;
+
 }
 
 .checkbox .checkbox-parts1 {
@@ -847,8 +898,8 @@ textarea::placeholder {
 
     /* チェックボックスのサイズ変更 */
 .checkbox input[type=checkbox] {
-	width:			15px;
-    height:			15px;
+	width:			30px;
+    height:			30px;
     margin-left: 30px;
 	-moz-transform:		scale(1.4);
 	-webkit-transform:	scale(1.4);
@@ -872,8 +923,8 @@ textarea::placeholder {
 .submit input {
     border-radius: 0px;
     margin: 0;
-    padding: 0;
     width: 200px;
+    height: 500px;
     color: #3acf60;
     text-shadow: 0 0 5px;
     background-color: rgba(255, 255, 255, 0);
@@ -883,10 +934,12 @@ textarea::placeholder {
     transition: all .5s ease .3s ;
 }
 
-.submit input:hover {
+.submit input:active {
     color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #3acf60;
     text-shadow: 0 0 7px #3acf60;
-    border-bottom: 7px double #3acf60;
+    /* border-bottom: 2px solid #3acf60; */
     background-image: linear-gradient(rgba(238, 255, 198, 0) , #a9e9b9 );
 }
 
@@ -901,7 +954,16 @@ textarea::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient( 45deg , #fff ,#ffb1d4 , #fff , #ffeab0 , #fff , #fdd2ba , #fff , #bbd0ff , #fff);
+    position: relative;
 }
+
+.footer-grd {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( #fff 10% , rgba(255, 255, 255, 0) 50%);
+}
+
 
 .footer-link a {
     font-size: 80px;
@@ -909,17 +971,19 @@ textarea::placeholder {
     padding: 10px;
     /* 透明色 */
     color: #fff;
-    text-shadow: 0 0 15px #3acf60;
+    text-shadow: 0 0 15px red;
     transition: all 1s ease;
+    position: absolute;
+
 }
 
 
-.footer-link a:hover {
-    width: 30%;
+.footer-link a:active {
+    width: 50%;
     text-align: center;
-    color: #3acf60;
+    color: rgba(255, 255, 255, 0.637);
     padding-bottom: 15px;
-    border-bottom: 7px double #3acf60;
+    border-bottom: 7px double rgb(255, 70, 70);
     border-radius: 30px;
 }
 

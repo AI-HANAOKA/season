@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    widows: 100vw;
+    width: 100vw;
     font-family: "Sawarabi Mincho";
 }
 
@@ -45,14 +45,12 @@ header a:hover {
     /* 後で消せ */  
     background-image: linear-gradient( 45deg , #fff ,#ffb1d4 , #fff , #ffeab0 , #fff , #fdd2ba , #fff , #bbd0ff , #fff);
     /* はみ出した要素の表示方法指定　hidden はみ出し切り捨て　スクロールもでない     */
-    overflow: hidden;
     border-bottom: 50px solid #917886;
 }
 
 .title {
     height: 100%;
     width: 100%;
-    overflow   : hidden;
     position: relative;
 
 }
@@ -268,7 +266,6 @@ header a:hover {
 .season-spring , .season-summer , .season-autumn , .season-winter {
     width: 100%;
     height: 130px;
-    overflow   : hidden;
     margin-top: 20px;
 }
 
@@ -363,6 +360,7 @@ header a:hover {
     align-items: flex-end;
     /* 相対配置 */
     position: relative;
+
 }
 
 .grd {
@@ -370,35 +368,38 @@ header a:hover {
     width: 100%;
     height: 100%;
     background-image: linear-gradient( rgba(255, 0, 0, 0) 70%, rgba(255, 255, 255, 0.788) 98% );
-    border-bottom: 20px solid #917886;
     padding: 10px 0;
 }
+
 .spring-Introduction p , .summer-Introduction p, .autumn-Introduction p , .winter-Introduction p {
     color: #fff;
+    text-shadow: 0 0 10px #e95295;
     font-size: 20px;
-    height: 45%;
-    width: 30%;
-    margin: 10px 10px 30px;
-    padding: 40px 20px;
+    height: 20%;
+    width: 100%;
     /* 背景色を半透明　文字色を不透明 */
-    background-color: rgba(219, 79, 165, 0.664);
+    background-image: linear-gradient(#ffffff00 , rgba(219, 79, 165, 0.664));
     /* 線が無くても角を丸めた背景色にできる */
-    border-radius: 10px;
     /* 絶対位置 */
     position: absolute;
     white-space: pre-wrap;
+    border-bottom: 20px solid #917886;
+
 }
 
 .summer-Introduction p {
-    background-color: rgba(230, 187, 47, 0.664);
+    background-image: linear-gradient(#ffffff00 , rgba(230, 187, 47, 0.664));
+    text-shadow: 0 0 10px #f8b500;
 }
 
 .autumn-Introduction p {
-    background-color: rgba(230, 99, 47, 0.664);
+    background-image: linear-gradient(#ffffff00 , rgba(230, 99, 47, 0.664));
+    text-shadow: 0 0 10px #ea5506;
 }
 
 .winter-Introduction p {
-    background-color: rgba(82, 97, 235, 0.664);
+    background-image: linear-gradient(#ffffff00 , rgba(82, 97, 235, 0.664));
+    text-shadow: 0 0 10px #3e62ad;
 }
 
 .spring-Introduction p span , .summer-Introduction p span , .autumn-Introduction p span , .winter-Introduction p span {
@@ -439,40 +440,35 @@ header a:hover {
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
     align-items: flex-end;
     /* 相対配置 */
     position: relative;
-    overflow   : hidden;
     border-bottom: 20px solid #917886;
 }
 
 .location1 p , .location2 p , .location3 p , .location4 p , .location5 p , .location6 p , .location7 p , .location8 p , .location9 p , .location10 p , .location11 p , .location12 p , .location13 p , .location14 p {
     color: #fff;
     font-size: 20px;
-    height: 45%;
-    width: 30%;
-    margin: 10px 10px;
-    padding: 40px 20px;
+    width: 100%;
     /* 背景色を半透明　文字色を不透明 */
-    background-color: rgba(219, 79, 165, 0.664);
-    /* 線が無くても角を丸めた背景色にできる */
-    border-radius: 10px;
+    background-image: linear-gradient( rgba(255, 255, 255, 0) , rgba(219, 79, 165, 0.664) 90%);
     /* 絶対位置 */
     position: absolute;
     white-space: pre-wrap;
 }
 
+
 .location5 p , .location6 p , .location7 p {
-    background-color:  rgba(230, 187, 47, 0.664);
+    background-image: linear-gradient( rgba(255, 255, 255, 0) , rgba(230, 187, 47, 0.664) 90%);
 }
 
 .location8 p , .location9 p , .location10 p {
-    background-color:  rgba(230, 99, 47, 0.664);
+    background-image: linear-gradient( rgba(255, 255, 255, 0) , rgba(230, 99, 47, 0.664) 90%);
+
 }
 
 .location11 p, .location12 p , .location13 p , .location14 p {
-    background-color: rgba(82, 97, 235, 0.664);
+    background-image: linear-gradient( rgba(255, 255, 255, 0) , rgba(82, 97, 235, 0.664) 90%);
 }
 
 .location1 span , .location2 span , .location3 span , .location4 span , .location5 span , .location6 span , .location7 span , .location8 span , .location9 span , .location10 span , .location11 span , .location12 span , .location13 span , .location14 span{
@@ -485,9 +481,9 @@ header a:hover {
 .location1 > .bgi-gray , .location2 > .bgi-gray , .location3 > .bgi-gray , .location4 > .bgi-gray , .location5 > .bgi-gray , .location6 > .bgi-gray , .location7 > .bgi-gray , .location8 > .bgi-gray , .location9 > .bgi-gray , .location10 > .bgi-gray , .location11 > .bgi-gray , .location12 > .bgi-gray , .location13 > .bgi-gray , .location14 > .bgi-gray{
     height: 100%;
     width: 100%;
-    background-size:  1950px;
-    /* 画像反転 */
-    /* transform: scale(-1 , 1); */
+    background-size:  100%;
+    object-fit: cover;
+
     background-repeat: no-repeat;
     /* イメージにグレイスケール */
     -webkit-filter: grayscale(100%);
@@ -502,19 +498,15 @@ header a:hover {
     /* 菜の花 left text*/
 .location2 , .location4  , .location5 , .location7 , .location9 , .location11 , .location13{
     height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
     align-items: flex-end;
     /* 相対配置 */
     position: relative;
-    overflow   : hidden;
     border-bottom: 20px solid #917886;
 
 }
 
-.location13 img {
-    transform: scale(-1, 1);
-}
 
 
 .select-jump {
@@ -534,7 +526,6 @@ header a:hover {
 /* 春　アクセス　タイトル */
 .spring-access {
     width: 100%;
-    overflow   : hidden;
     margin: 30px 0 20px;
 }
 
@@ -549,12 +540,17 @@ header a:hover {
     display: flex;
     border-bottom: 1px solid #e95295;
     background-image: linear-gradient(#fff 20%, #f393be);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 
 .access-left img {
     height: 500px;
+    width: cover;
     margin: 0 20px 20px;
     border-radius: 50px;
+    background-size: cover;
 }
 
 .access-text {
@@ -587,6 +583,7 @@ header a:hover {
 iframe {
     border-radius: 50px;
     width: 100%;
+    background-size: cover;
 }
 
 
@@ -601,6 +598,9 @@ iframe {
     display: flex;
     border-bottom: 1px solid #f8b500;
     background-image: linear-gradient(#fff 20%, #f3e593);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 
 .access-summer h3 {
@@ -636,6 +636,9 @@ iframe {
     display: flex;
     border-bottom: 1px solid #ea5506;
     background-image: linear-gradient(#fff 20%, #f3a193);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 
 .access-autumn h3 {
@@ -670,6 +673,9 @@ iframe {
     display: flex;
     border-bottom: 1px solid #3e62ad;
     background-image: linear-gradient(#fff 20%, #9399f3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 
 .access-winter h3 {
@@ -883,6 +889,14 @@ textarea::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient( 45deg , #fff ,#ffb1d4 , #fff , #ffeab0 , #fff , #fdd2ba , #fff , #bbd0ff , #fff);
+    position: relative;
+}
+
+.footer-grd {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( #fff 10% , rgba(255, 255, 255, 0) 50%);
 }
 
 .footer-link a {
@@ -891,17 +905,19 @@ textarea::placeholder {
     padding: 10px;
     /* 透明色 */
     color: #fff;
-    text-shadow: 0 0 15px #3acf60;
+    text-shadow: 0 0 15px red;
     transition: all 1s ease;
+    position: absolute;
+
 }
 
 
 .footer-link a:hover {
     width: 30%;
     text-align: center;
-    color: #3acf60;
+    color: rgba(255, 255, 255, 0.637);
     padding-bottom: 15px;
-    border-bottom: 7px double #3acf60;
+    border-bottom: 7px double rgb(255, 70, 70);
     border-radius: 30px;
 }
 
